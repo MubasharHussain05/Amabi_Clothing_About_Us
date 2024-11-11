@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about us</title>
+   <style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    height: auto;
+    gap: 10px;
+}
+
+/* <!-- How We Work section start --> */
+.container {
+    max-width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.flex {
+    width: 100%;
+    height: 330px;
+    display: flex;
+    padding: 10rem;
+    justify-content: space-between;
+    background-color: #F9F9F9;
+    gap: 20px;
+}
+
+.card1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    text-align: start;
+    gap: 12px;
+    width: 220px;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.para {
+    font-size: 18px;
+    line-height: 1;
+}
+
+.bold_para {
+    font-weight: bold;
+    width: 300px;
+}
+
+.ImgContent {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 60px 40px ;
+    
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.text-content {
+    width: 800px;
+    display: flex;
+    justify-content: start;
+    text-align: start;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.text-content h1 {
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.text-content p {
+    font-size: 18px;
+    color: #555560;
+    line-height: 1.5;
+    font-size: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    min-width: 500px;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 8px;
+    gap: 30px;
+    margin-top: 50px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+    width: 80%;
+    height: auto;
+    border-radius: 8px;
+    display: flex;
+}
+.custom-border {
+    border-bottom: 1px solid  #555560;; /* Change the color and thickness as needed */
+    width: 800px; /* Set the width of the border */
+    margin: 0 auto; /* Center the div if needed */
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.icon-container {
+    display: flex;
+    flex-direction: row; /* Change to 'column' for vertical alignment */
+    gap: 10px; /* Optional: Adds space between icons */
+}
+
+.icon-container .fa-brands{
+    width: 60px; /* Set width of icons */
+    height: 60px; /* Set height of icons */
+    background-color: rgb(200, 202, 202);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px solid white;
+    border-radius: 50%;
+    font-size: 24px;
+}
+.icon-container .fa-brands:hover{
+  background-color: rgb(126, 126, 236);
+  color: black;
+}
+
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide .card {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 8px;
+    gap: 30px;
+    margin-top: 50px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.swiper-slide .card img {
+    width: 80%;
+    height: auto;
+    border-radius: 8px;
+    display: flex;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .flex {
+        flex-direction: column;
+        height: auto;
+        padding: 5rem;
+    }
+
+    .text-content {
+        width: 100%;
+    }
+
+    .card {
+        min-width: 100%;
+    }
+
+    .ImgContent {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .text-content h1 {
+        font-size: 36px;
+    }
+
+    .text-content p {
+        font-size: 20px;
+    }
+
+    .card {
+        min-width: 600px;
+    }
+}
+   </style>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <section class="container ">
+        <div class="flex">
+        <div class="card1 bold_para">
+          <h2>About Us</h2>
+          <p class="para ">Welcome to Amabi Clothing – Your Partner in Quality Fashion Manufacturing</p>
+        </div>
+        <div class="card1">
+          <h2>We love what we do</h2>
+          <p class="para">Passion in Every Stitch" - Turning dreams into wearable art, where your vision becomes our passion.</p>
+        </div>
+        <div class="card1">
+          <h2>Our working process</h2>
+          <p class="para">"Crafting Excellence, Step by Step" - The artistry behind our process, creating style one phase at a time.</p>
+        </div>
+    </div>
+  </section >
+
+
+
+   <section class="container" style="width: 100%;">
+    <div class="ImgContent">
+        <!-- Left Side: Image -->
+        <div class="image">
+          <img src="image/image1.png" alt="Descriptive Text">
+        </div>
+        
+        <!-- Right Side: Text Content -->
+        <div class="text-content">
+          <h1>About Us</h1>
+          <p>Welcome to Amabi Clothing's online store, where fashion meets convenience in the digital age. Explore our meticulously curated collection, tailor your selections to match your unique style, and shop with confidence knowing that your online transactions are secure and your fashion finds will be delivered with efficiency.</p>
+          <p>Our commitment to excellence extends seamlessly to our online presence, ensuring that your shopping experience is as exceptional as our clothing. Thank you for choosing Amabi Clothing's online store as your destination for fashion excellence.</p>
+
+          <div class="custom-border"></div>
+
+          <div class="icon-container">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-pinterest-p"></i>
+            <i class="fa-brands fa-linkedin-in"></i>
+            <i class="fa-brands fa-telegram"></i>
+            </div>
+           </div> 
+      </div>
+      </section>
+
+
+       <section class="container" style="width: 100%;">
+      <div class="ImgContent">
+        <!-- Left Side: Image -->
+        <div class="text-content">
+            <h1>Why Choose Us?</h1>
+            <p><span style="font-weight: 700;">Expertise</span>: Our team brings years of experience in clothing manufacturing, ensuring that your designs are in capable hands.</p>
+            <p><span style="font-weight: 700;">Quality</span>: We take pride in delivering clothing of the highest quality, meeting and exceeding industry standards.</p>
+            <p><span style="font-weight: 700;">Customization</span>: Your vision is our priority. We work closely with you to bring your unique ideas to life.</p>
+            <p><span style="font-weight: 700;">Reliability</span>: Count on us for timely delivery and dependable service, every time.</p>     
+          </div>
+        
+        <!-- Right Side: Text Content -->
+        <div class="image">
+            <img src="image/image2.png" alt="Descriptive Text">
+          </div>
+        
+      </div>
+
+    </section>
+
+
+      <div class="swiper mySwiper container">
+        <div class="swiper-wrapper ">
+          <div class="swiper-slide">
+            <div class="card">
+                <img src="image/image3.png" alt="Image 1">
+                <h2>Our Mission</h2>
+                <p class="para">Welcome to Amabi Clothing's online store, where fashion meets convenience in the digital age. Explore our meticulously curated collection, tailor your selections to match your unique style, and shop with confidence knowing that your online transactions are secure and your fashion finds will be delivered with efficiency.</p>
+              </div>
+
+              <div class="card">
+                <img src="image/image4.png" alt="Image 2">
+                <h2>Our Mission</h2>
+                <p class="para">Welcome to Amabi Clothing's online store, where fashion meets convenience in the digital age. Explore our meticulously curated collection, tailor your selections to match your unique style, and shop with confidence knowing that your online transactions are secure and your fashion finds will be delivered with efficiency.</p>
+              </div>
+
+              
+          </div>
+
+          <div class="swiper-slide">
+            <div class="card">
+                <img src="image/image4.png" alt="Image 2">
+                <h2>Our Mission</h2>
+                <p class="para">Welcome to Amabi Clothing's online store, where fashion meets convenience in the digital age. Explore our meticulously curated collection, tailor your selections to match your unique style, and shop with confidence knowing that your online transactions are secure and your fashion finds will be delivered with efficiency.</p>
+              </div>
+
+              <div class="card">
+                <img src="image/image5.png" alt="Image 3">
+                <h2>Our Mission</h2>
+                <p class="para">Welcome to Amabi Clothing's online store, where fashion meets convenience in the digital age. Explore our meticulously curated collection, tailor your selections to match your unique style, and shop with confidence knowing that your online transactions are secure and your fashion finds will be delivered with efficiency.</p>
+              </div>
+
+          </div>
+
+          <div class="swiper-slide">
+            <div class="card">
+            <img src="image/image5.png" alt="Image 3">
+            <h2>Our Mission</h2>
+            <p class="para">Welcome to Amabi Clothing's online store, where fashion meets convenience in the digital age. Explore our meticulously curated collection, tailor your selections to match your unique style, and shop with confidence knowing that your online transactions are secure and your fashion finds will be delivered with efficiency.</p>
+          </div>
+
+          <div class="card">
+            <img src="image/image3.png" alt="Image 1">
+            <h2>Our Mission</h2>
+            <p class="para">Welcome to Amabi Clothing's online store, where fashion meets convenience in the digital age. Explore our meticulously curated collection, tailor your selections to match your unique style, and shop with confidence knowing that your online transactions are secure and your fashion finds will be delivered with efficiency.</p>
+          </div>
+        </div>
+         
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+
+
+
+      <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+      <script>
+
+var swiper = new Swiper(".mySwiper", {
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+
+
+      </script>
+      
+</body>
+</html>
